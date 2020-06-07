@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Sinkin";
+    src: url("Polices/SinkinSans-400Regular.otf");
+}
+@font-face {
+    font-family: "Sinkin_bold";
+    src: url("Polices/SinkinSans-600SemiBold.otf")
+}
+@font-face {
+    font-family: "Sinkin_light";
+    src: url("Polices/SinkinSans-200XLight.otf")
+}
+@font-face {
+    font-family: "Sinkin_thin";
+    src: url("Polices/SinkinSans-100Thin.otf")
+}
+body {
+    margin:0em;
+}
+#bloc_page {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: "Sinkin"; 
+}
+header {
+    margin-top: 5em;
+}
+#banner {
+    width : 33%;
+    background-color: rgb(254,202,7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#banner p {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    margin-top: 2em;
+}
+.banner_title {
+    background-color:rgb(64,64,64);
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(254,202,7);
+    font-size: large;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    font-size: 1.8em;
+}
+.bold {
+    font-weight: bold;
+ 
+}
+#photo {
+    margin-top: 1em;
+}
+#photo p {
+    display: flex;
+    justify-content: center;
+}
+#ronde {
+    border-radius: 50%;
+    border: 5px rgba(64,64,64,0.15) solid;
+    height:auto;
+    width:100%;
+    
+}
+#banner_contact p {
+    font-weight: bold;
+}
+
+#corpus {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#identite {
+    font-size: 50px;
+    text-transform: uppercase ;
+    color: black;
+    font-weight: normal;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+header h2 {
+    margin-top: -0.25em;
+}
+
+mark {
+    color: rgb(254,202,7);
+    background-color: transparent;
+    font-weight: bold;
+}
+header {
+    margin-bottom: 100px;
+}
+
+.form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#foot {
+    display: flex;
+    justify-content: space-between;
+}
+.foot_bloc {
+    width:50%;
+}
+
+.period {
+    width: 30%;
+    font-weight: bold;
+}
+
+h1 {
+    display:flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    color: black;
+    border-bottom: 3px rgb(254,202,7) solid;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+.icon {
+    margin-right: 30px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.titre_form {
+    margin-top: 0px;
+    margin-bottom: 0em;
+    text-transform: uppercase;
+    font-family:"Sinkin_bold" ;
+    
+}
+.parag {
+    
+}
+.parag h3 {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    font-family:"Sinkin_Light" ;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.parag p {
+    margin-top: 0em;
+    font-family:"Sinkin_Light" ;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.foot_title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+#barre {
+    border-bottom: 3px rgb(254,202,7) solid;
+}
+
+
+#bloc_page {
+    color: rgb(64,64,64);
+}
+#loisirs_form {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.loisirs_icons {
+    border-radius: 50%;
+    border: 3px rgb(64,64,64) solid;
+    background: transparent;
+    width: 20%;
+}
+
+ul {
+    list-style-image: url(Images/dot.png);
+    padding-left:1.5em;
+}
+
+.dot1 {
+    margin-right: 1em;
+}
+
+p {
+    margin-bottom: 0.25em;
+    margin-top:0.25em;
+}
