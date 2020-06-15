@@ -263,8 +263,8 @@ body {
                 text-transform: uppercase;
                 color: rgb(254,202,7);
                 font-size: large;
-                padding-top: 0.1em;
-                padding-bottom: 0.1em;
+                padding-top: 0.2em;
+                padding-bottom: 0.2em;
                 font-size: 1.3em;
                 font-weight: normal;
             }
@@ -360,7 +360,7 @@ body {
         }
 
         #photo_responsive .ronde {
-            width: 10em;
+            width: 1em;
         }
 
         #corpus #titre_haut {
@@ -458,7 +458,7 @@ body {
 
         #banner {
             width: 100%;
-            font-size: 0.7em;
+            font-size: 0.8em;
             padding-top: 0em;
         }
 
