@@ -253,6 +253,7 @@ body {
                 border-radius: 50%;
                 border: 0.3em rgba(64,64,64,0.15) solid;
                 width: 13em; 
+                height: 13em;
             }
 
             /* Mise en forme du corps écrit de la bannière */
