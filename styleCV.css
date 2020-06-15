@@ -354,13 +354,13 @@ body {
             justify-content: center ;
             background-color: rgb(254,202,7);
             margin: 0em;
-            width: 100%;
+            /* width: 100%; */
             padding-top: 1em;
             padding-bottom: 1em;
         }
 
         #photo_responsive .ronde {
-            width: 1em;
+            width: 10em;
         }
 
         #corpus #titre_haut {
