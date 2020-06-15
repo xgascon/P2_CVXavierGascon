@@ -1,208 +1,566 @@
+
+/* Configuration des Polices */
+
 @font-face {
     font-family: "Sinkin";
-    src: url("Polices/SinkinSans-400Regular.otf");
+    src: url("Polices/SinkinSans-400Regular.otf"),
+    url("Polices/SinkinSans-400Regular.ttf"),
+    url("Polices/SinkinSans-400Regular.svg");
 }
 @font-face {
     font-family: "Sinkin_bold";
-    src: url("Polices/SinkinSans-600SemiBold.otf")
+    src: url("Polices/SinkinSans-600SemiBold.otf"),
+    url("Polices/SinkinSans-600SemiBold.ttf"),
+    url("Polices/SinkinSans-600SemiBold.svg");
 }
 @font-face {
     font-family: "Sinkin_light";
-    src: url("Polices/SinkinSans-200XLight.otf")
+    src: url("Polices/SinkinSans-300Light.otf"),
+    url("Polices/SinkinSans-300Light.ttf"),
+    url("Polices/SinkinSans-300Light.svg");
 }
 @font-face {
     font-family: "Sinkin_thin";
-    src: url("Polices/SinkinSans-100Thin.otf")
+    src: url("Polices/SinkinSans-100Thin.otf"),
+    url("Polices/SinkinSans-100Thin.ttf"),
+    url("Polices/SinkinSans-100Thin.svg");
 }
+
+/* Mise en forme de la totalité de la page */
+
 body {
-    margin:0em;
-}
-#bloc_page {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    margin: 0em;
     font-family: "Sinkin"; 
-}
-header {
-    margin-top: 5em;
-}
-#banner {
-    width : 33%;
-    background-color: rgb(254,202,7);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#banner p {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: justify;
-    margin-top: 2em;
-}
-.banner_title {
-    background-color:rgb(64,64,64);
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(254,202,7);
-    font-size: large;
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    font-size: 1.8em;
-}
-.bold {
-    font-weight: bold;
- 
-}
-#photo {
-    margin-top: 1em;
-}
-#photo p {
-    display: flex;
-    justify-content: center;
-}
-#ronde {
-    border-radius: 50%;
-    border: 5px rgba(64,64,64,0.15) solid;
-    height:auto;
-    width:100%;
-    
-}
-#banner_contact p {
-    font-weight: bold;
-}
-
-#corpus {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-#identite {
-    font-size: 50px;
-    text-transform: uppercase ;
-    color: black;
-    font-weight: normal;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-header h2 {
-    margin-top: -0.25em;
-}
-
-mark {
-    color: rgb(254,202,7);
-    background-color: transparent;
-    font-weight: bold;
-}
-header {
-    margin-bottom: 100px;
-}
-
-.form {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-#foot {
-    display: flex;
-    justify-content: space-between;
-}
-.foot_bloc {
-    width:50%;
-}
-
-.period {
-    width: 30%;
-    font-weight: bold;
-}
-
-h1 {
-    display:flex;
-    justify-content: flex-start;
-    text-transform: uppercase;
-    color: black;
-    border-bottom: 3px rgb(254,202,7) solid;
-    padding: 5px;
-    margin-bottom: 50px;
-}
-.icon {
-    margin-right: 30px;
-    margin-left: 0px;
-    padding: 0px;
-}
-
-.titre_form {
-    margin-top: 0px;
-    margin-bottom: 0em;
-    text-transform: uppercase;
-    font-family:"Sinkin_bold" ;
-    
-}
-.parag {
-    
-}
-.parag h3 {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    font-family:"Sinkin_Light" ;
-    font-weight: bold;
-    font-size: 1.05em;
-}
-
-.parag p {
-    margin-top: 0em;
-    font-family:"Sinkin_Light" ;
-    font-weight: bold;
-    font-size: 1em;
-    text-align: justify;
-}
-
-.foot_title {
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-em {
-    font-weight: bold;
-    font-style: normal;
-}
-#barre {
-    border-bottom: 3px rgb(254,202,7) solid;
-}
-
-
-#bloc_page {
     color: rgb(64,64,64);
-}
-#loisirs_form {
-    align-self: flex-end;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.loisirs_icons {
-    border-radius: 50%;
-    border: 3px rgb(64,64,64) solid;
-    background: transparent;
-    width: 20%;
+    font-size: 0.9em;
 }
 
-ul {
-    list-style-image: url(Images/dot.png);
-    padding-left:1.5em;
+    /* Mise en forme globale de la bannière et du corps du CV */
+
+    #bloc_page {
+        margin-left: 25em;
+        margin-right: 25em;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;  
+    }
+
+    #photo_responsive {
+        display: none;
+    }
+
+        /* Mise en forme du corps du CV */
+
+        #corpus {
+            flex: 3;
+            margin-left: 5em;
+            margin-top: 2em;
+            margin-bottom: 4em;
+        }
+
+
+            /* Mise en forme du HEADER avec identité seulement */
+
+            #titre_haut {
+                padding-top: 3em;
+                margin-right: 2em;
+                margin-bottom: 7em;
+            }
+
+            #identite {
+                text-transform: uppercase ;
+                color: black;
+                font-family: "Sinkin_light";
+                font-weight: lighter;
+                margin-bottom: 0em;
+                padding-bottom: 0em;
+                font-size: 3em;
+            }
+
+            #identite mark {
+                color: rgb(254,202,7);
+                background-color: transparent;
+                font-weight: bold;
+            }
+
+            #titre_haut h2 {
+                margin-top: -0.25em;
+            }
+
+            #titre_haut h2 #barre {
+                border-bottom: 0.1em rgb(254,202,7) solid;
+            }
+
+            /*ARTICLE Formation & Exp Pro*/
+
+            .corpus_title {
+                display:flex;
+                justify-content: flex-start;
+                text-transform: uppercase;
+                color: black;
+                border-bottom: 0.1em rgb(254,202,7) solid;
+                padding-bottom: 0.6em;
+                margin-bottom: 2em;
+                font-size: 1.2em;
+            }
+
+            .corpus_title .icon {
+                color: rgb(254,202,7);
+                margin-right: 1em;
+                font-size: 1.8em;
+            }
+
+                /* Liste avec les évènements */
+                
+                ul {
+                    list-style-type: none;
+                }
+
+                .form li {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 3em;
+                }
+
+                .form .icon {
+                    color: rgb(254,202,7);
+                    padding-top: 0.5em;
+                    margin-left: -2.5em;
+                }
+
+                    /* Bloc avec période */
+
+                    .period {
+                        font-weight: bold;
+                        flex-wrap: wrap;
+                        font-size: 0.9em;
+                        margin-right: 2em;
+                        margin-left: 1.2em;
+                        min-width: 10em;
+                    }
+
+                    /* Bloc Paragraphe */
+
+                    .parag {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        font-family:"Sinkin_Light" ;
+                        font-size: 1em;
+                        text-align: justify;
+                    }
+
+                    .titre_form {
+                        margin-top: 0em;
+                        margin-bottom: 0em;
+                        text-transform: uppercase;
+                        font-family:"Sinkin_bold" ;
+                        font-size: larger;
+                        font-size: 1em;
+                    }
+
+                    .parag h4 {
+                        margin-top: 0.3em;
+                        margin-bottom: 0.5em;
+                        font-family:"Sinkin_Light" ;
+                        font-size: 1em;
+                        flex-wrap: wrap;
+                    }
+
+                    .parag h4 .icon {
+                        margin-left: 0em;
+                        margin-right: 0.2em;
+                    }
+
+                    .parag p {
+                        margin-bottom: 0.25em;
+                        margin-top:0.25em;
+                        font-size: 0.9em;
+                    }
+
+                    strong {
+                        font-weight: bold;
+                    }
+
+                        /* Liste OC_Tasks */
+
+                        .italic {
+                            font-style: italic;
+                            font-size: smaller;
+                        }
+
+                        .parag .oc_tasks {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                        }
+
+                        .parag .oc_tasks li {
+                            margin-bottom: 0em;
+                            text-align: justify;
+                        }
+
+                        .parag .oc_tasks .icon {
+                            margin-right: 1em;
+                        }
+
+            /*ARTICLE Recommandations*/
+
+            #reco_form {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .foot_title {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: medium;
+                margin-top: 0em;
+            }
+
+            .foot_bloc {
+                min-width: 18em;
+            }
+
+            #reco_form p {
+                margin-bottom: 0.2em;
+                margin-top: 0em;
+                font-size: smaller;
+            }
+
+        /*ASIDE Mise en forme de la bannière à gauche du CV */
+
+        #banner {
+            flex: 1.65;
+            background-color: rgb(254,202,7);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 3.75em;
+            padding-top: 1em;
+        }
+
+            /* Mise en forme de la photo */
+
+            #banner #photo {
+                background-color: rgb(254,202,7);
+                text-align: center;
+                padding-top: 3em;
+            }
+
+            .ronde {
+                border-radius: 50%;
+                border: 0.3em rgba(64,64,64,0.15) solid;
+                width: 13em; 
+            }
+
+            /* Mise en forme du corps écrit de la bannière */
+
+            .banner_title {
+                background-color:rgb(64,64,64);
+                text-align: center;
+                text-transform: uppercase;
+                color: rgb(254,202,7);
+                font-size: large;
+                padding-top: 0.1em;
+                padding-bottom: 0.1em;
+                font-size: 1.3em;
+                font-weight: normal;
+            }
+                /* Contact */
+
+                #contact_parag {
+                    font-weight: bold;
+                    padding-left: 3em;
+                    padding-right: 3em;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    font-size: 0.9em;
+                }
+
+                #contact_parag p {
+                    margin-top: 0em;
+                }
+
+                #contact_parag a {
+                    text-decoration: none;
+                    color: rgb(64,64,64);
+                }
+
+                #contact_parag a:hover {
+                    text-decoration: underline;
+                    color:black;
+                }
+
+                /* A propos de moi */
+
+                #banner_propos {
+                    flex: 2;
+                }
+
+                #propos_parag {
+                    padding-left: 3em;
+                    padding-right: 3em;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    text-align: justify;
+                    font-size: 0.9em;
+                }
+
+                /* Loisirs */
+
+                #loisirs_form {
+                    display: flex;
+                    justify-content: space-around;
+                    padding-left: 3em;
+                    padding-right: 3em;
+                    font-size: 0.9em;
+                }
+
+                #loisirs_form i {
+                    border-radius: 50%;
+                    border: 0.07em rgb(64,64,64) solid;
+                    height: 1.5em;
+                    width: 1.5em;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+
+                .fa-theater-masks, .fa-swimmer, .fa-horse {
+                    font-size: 2.5em;
+                }
+
+/* MEDIA QUERY smartphones */
+
+@media all and (max-width: 767px) {
+
+    /* Mise en forme smartphones globale de la bannière et du corps du CV */
+
+    #bloc_page {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0em;
+    }
+
+        /* Mise en forme smartphones du HEADER avec photo et identité */
+
+        #photo_responsive {
+            display: flex;
+            justify-content: center ;
+            background-color: rgb(254,202,7);
+            margin: 0em;
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        #photo_responsive .ronde {
+            width: 10em;
+        }
+
+        #corpus #titre_haut {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0em;
+            padding: 0em;
+        }
+
+        #corpus #titre_haut #identite {
+            font-size: 1.8em;
+        }
+
+        #corpus #titre_haut h2 {
+            font-size: 1em;
+        }
+
+        /* Mise en forme smartphones du corps du CV */
+
+        #corpus {
+            margin: auto;
+            padding: 1em;
+        }
+        
+        .corpus_title {
+            font-size: auto;
+        }
+
+        .form {
+            font-size: 0.7em;
+        }
+
+        .form ul {
+            padding: 0em;
+        }
+
+        .form li {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .form .icon {
+            padding: 0em;
+            padding-bottom: 1em;
+            margin-left: 0em;
+        }
+        
+        .period {
+            padding-bottom: 1em;
+            font-size: 1em;
+            margin: 0em;
+        }
+
+        .parag {
+            text-align: center;
+        }
+
+        .parag p {
+            text-align: justify;
+        }
+
+        .parag .oc_tasks {
+            margin: 0em;
+            padding: 0em;
+        }
+
+        .parag .oc_tasks li {
+            display: inline;
+        }
+
+        .parag .oc_tasks .icon {
+            padding: 0.5em;
+            margin: auto;
+        }
+        
+        #reco_form {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.6em;
+            text-align: center;
+        }
+
+        .foot_bloc {
+            padding-bottom: 1.5em;
+        }
+
+        .foot_title {
+            font-size: 1em;
+            margin-bottom: 0.2em;
+        }
+
+        /* Mise en forme smartphones de la bannière à gauche du CV */
+
+        #banner {
+            width: 100%;
+            font-size: 0.7em;
+            padding-top: 0em;
+        }
+
+        #banner #photo {
+            display: none;
+        }
+
+        #banner_contact .banner_title {
+            margin-top: 0em;
+        }
+
+        #contact_parag {
+            text-align: center;
+        }
+
+        #propos_parag {
+            text-align: center;
+        }
+
 }
 
-.dot1 {
-    margin-right: 1em;
-}
+/* MEDIA QUERY tablettes */
 
-p {
-    margin-bottom: 0.25em;
-    margin-top:0.25em;
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+    /* Mise en forme tablettes globale de la totalité de la page */
+
+    #bloc_page {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0em;
+    }
+
+        /* Mise en forme tablettes du HEADER avec photo et identité */
+
+        #photo_responsive {
+            display: flex;
+            justify-content: center ;
+            background-color: rgb(254,202,7);
+            margin: 0em;
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        #photo_responsive .ronde {
+            width: 10em;
+        }
+
+        #corpus #titre_haut {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #corpus #titre_haut {
+            margin: 0em;
+            margin-bottom: 2em;
+            padding: 0em;
+        }
+
+        #corpus #titre_haut #identite {
+            font-size: 2em;
+        }
+
+        #corpus #titre_haut h2 {
+            font-size: 1.3em;
+        }
+
+        /* Mise en forme tablettes du corps du CV */
+
+        #corpus {
+            margin-right: 5em;
+            margin-left: 5em;
+            margin-top: 0em;
+        }
+        
+        /* Mise en forme tablettes de la bannière du CV */
+
+        #banner {
+            width: 100%;
+            font-size: 0.7em;
+            padding-top: 0em;
+        }
+
+        #banner #photo {
+            display: none;
+        }
+
+        #banner_contact .banner_title {
+            margin-top: 0em;
+        }
+
+        #contact_parag {
+            text-align: center;
+        }
+
+        #propos_parag {
+            text-align: center;
+            padding-right: 8em;
+            padding-left: 8em;
+        }
+
 }
