@@ -38,8 +38,8 @@ body {
     /* Mise en forme globale de la bannière et du corps du CV */
 
     #bloc_page {
-        margin-left: 25em;
-        margin-right: 25em;
+        max-width: 900px;
+        margin: auto;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;  
@@ -52,7 +52,8 @@ body {
         /* Mise en forme du corps du CV */
 
         #corpus {
-            flex: 3;
+            width: 67%;
+            flex-grow: 3;
             margin-left: 5em;
             margin-top: 2em;
             margin-bottom: 4em;
@@ -142,6 +143,7 @@ body {
                     /* Bloc Paragraphe */
 
                     .parag {
+                        width: 100%; /*For IE11 to wrap the text*/
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
@@ -176,6 +178,8 @@ body {
                         margin-bottom: 0.25em;
                         margin-top:0.25em;
                         font-size: 0.9em;
+                        flex-wrap: wrap;
+                        /* border: 1px black solid; */
                     }
 
                     strong {
@@ -220,7 +224,7 @@ body {
             }
 
             .foot_bloc {
-                min-width: 18em;
+                min-width: 20em;
             }
 
             #reco_form p {
@@ -232,7 +236,8 @@ body {
         /*ASIDE Mise en forme de la bannière à gauche du CV */
 
         #banner {
-            flex: 1.65;
+            width: 33%;
+            flex-grow: 1.65;
             background-color: rgb(254,202,7);
             display: flex;
             flex-direction: column;
@@ -298,7 +303,7 @@ body {
                 /* A propos de moi */
 
                 #banner_propos {
-                    flex: 2;
+                    flex-grow: 2;
                 }
 
                 #propos_parag {
@@ -345,7 +350,8 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin: 0em;
+        width: auto;
+        max-width: 767px;
     }
 
         /* Mise en forme smartphones du HEADER avec photo et identité */
@@ -384,6 +390,7 @@ body {
         /* Mise en forme smartphones du corps du CV */
 
         #corpus {
+            width: auto;
             margin: auto;
             padding: 1em;
         }
@@ -393,7 +400,7 @@ body {
         }
 
         .form {
-            font-size: 0.7em;
+            font-size: 0.9em;
         }
 
         .form ul {
@@ -422,10 +429,6 @@ body {
             text-align: center;
         }
 
-        .parag p {
-            text-align: justify;
-        }
-
         .parag .oc_tasks {
             margin: 0em;
             padding: 0em;
@@ -433,6 +436,7 @@ body {
 
         .parag .oc_tasks li {
             display: inline;
+            text-align: center;
         }
 
         .parag .oc_tasks .icon {
@@ -443,7 +447,7 @@ body {
         #reco_form {
             display: flex;
             flex-direction: column;
-            font-size: 0.6em;
+            font-size: 0.9em;
             text-align: center;
         }
 
@@ -487,12 +491,12 @@ body {
 @media all and (min-width: 768px) and (max-width: 991px) {
 
     /* Mise en forme tablettes globale de la totalité de la page */
-
     #bloc_page {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin: 0em;
+        width: auto;
+        max-width: 991px;
     }
 
         /* Mise en forme tablettes du HEADER avec photo et identité */
@@ -509,8 +513,9 @@ body {
 
         #photo_responsive .ronde {
             width: 10em;
+            height: 10em;
         }
-
+       
         #corpus #titre_haut {
             display: flex;
             flex-direction: column;
@@ -534,16 +539,17 @@ body {
         /* Mise en forme tablettes du corps du CV */
 
         #corpus {
+            width: auto;
             margin-right: 5em;
             margin-left: 5em;
             margin-top: 0em;
         }
-        
+
         /* Mise en forme tablettes de la bannière du CV */
 
         #banner {
             width: 100%;
-            font-size: 0.7em;
+            font-size: 0.9em;
             padding-top: 0em;
         }
 
