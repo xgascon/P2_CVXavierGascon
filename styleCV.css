@@ -33,6 +33,7 @@ body {
     font-family: "Sinkin"; 
     color: rgb(64,64,64);
     font-size: 0.9em;
+    line-height: 1.5em;
 }
 
     /* Mise en forme globale de la bannière et du corps du CV */
@@ -82,10 +83,6 @@ body {
                 color: rgb(254,202,7);
                 background-color: transparent;
                 font-weight: bold;
-            }
-
-            #titre_haut h2 {
-                margin-top: -0.25em;
             }
 
             #titre_haut h2 #barre {
@@ -396,7 +393,7 @@ body {
         }
         
         .corpus_title {
-            font-size: auto;
+            font-size: 1.1em;
         }
 
         .form {
@@ -464,7 +461,7 @@ body {
 
         #banner {
             width: 100%;
-            font-size: 0.8em;
+            font-size: 0.9em;
             padding-top: 0em;
         }
 
