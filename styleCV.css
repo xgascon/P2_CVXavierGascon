@@ -39,7 +39,7 @@ body {
     /* Mise en forme globale de la bannière et du corps du CV */
 
     #bloc_page {
-        max-width: 900px;
+        max-width: 1024px;
         margin: auto;
         display: flex;
         flex-direction: row-reverse;
